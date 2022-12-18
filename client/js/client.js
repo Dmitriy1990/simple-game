@@ -15,7 +15,7 @@ const onFormSubmitted = (e) => {
   const input = document.querySelector("#chat");
   const text = input.value;
   input.value = "";
-
+  // writeEvent(text);
   sock.emit("message", text);
 };
 
@@ -28,7 +28,7 @@ const addButtonListeners = () => {
   });
 };
 
-writeEvent("Welcome to RPS");
+// writeEvent("Welcome to RPS");
 
 const sock = io();
 sock.on("message", writeEvent);
